@@ -84,7 +84,9 @@ static function LoadUrl(url : String) {
 
 function Update() {
     UpdatePlatform();
-    instance.loadRequest = false;
+    if (instance != null) {
+        instance.loadRequest = false;
+    }
 }
 
 #if UNITY_EDITOR
